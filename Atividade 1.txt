@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+  </head>
+  <body>
+    <?php 
+      class Pessoa
+      {
+        public $nome;
+        public $sobrenome;
+        public $email;
+
+        public function __construct($nome,$sobrenome)
+        {
+          $this->nome = $nome;
+          $this->sobrenome = $sobrenome;
+
+        }
+
+        public function ola()
+        {
+          echo "ola $this->nome $this->sobrenome";
+        }
+
+        public function registrar($email)
+        {
+          $this->email = $email;
+          echo "registrado";
+
+        }
+
+        public function EMAIL()
+        {
+         if($this->email != NULL)
+         {
+           echo "email enviado";
+         }
+         else
+         {
+           echo "email nao registrado";
+         }
+        }
+
+      }
+
+      $usuario1 = new Pessoa('fabiano','Goncalves');
+      $usuario1->ola();
+
+      echo "</br>";
+
+      $usuarioRambo = new Pessoa('Sylvester','Stallone');
+      $usuarioRambo->ola();
+
+      echo "</br>";
+
+      $usuario2 = new pessoa('johnny','walker');
+      $usuario2->ola();
+
+      echo "</br>";
+
+      $usuariojair = new pessoa('jair','');
+      $usuariojair->ola();
+      echo "------";
+      echo " ";
+      $usuariojair->registrar('sla');
+      echo "------";
+      echo " ";
+      $usuariojair->EMAIL();
+
+
+
+    ?> 
+  </body>
+</html>
